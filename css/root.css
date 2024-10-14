@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#38005C;
+    --primary:#da720a;
+    --bg_primary: #eae9e9;
+    --border: 0.1rem solid rgba(139, 138, 138, 0.3);
+    --scale-up: scale(1.2);
+    --white: #fff;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+    background-color: var(--grey)
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+body{
+    background: #fff;
+}
+
+section{
+    padding:2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color:#010101;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn{
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+    box-sizing: border-box;
+    padding: .9rem 3rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+.btn:before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 1s;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+    transform: scale(1.05);
+    
+}
+
+.button-style:before {
+    width: 0%;
+    height: 100%;
+    background: #05891e;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 1s;
+}
+
+.button-style:hover:before {
+    width: 100%;
+}
+.urgent-button-style:before {
+    width: 0%;
+    height: 100%;
+    background: #ff0000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 1s;
+}
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-1785 {
+      /* 200px - 300px - leaving extra space for the navigation */
+      padding: clamp(12.5rem, 25.95vw, 18.75em) 1rem;
+      /* prevents the topper line from causing an overflow */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+}
+/* Adjusted for desktop screen */
+@media (min-width: 1920px){
+
+    #menu-btn{
+        display: none; /* Hide the menu button for desktop */
+    }
+    .header .navbar{
+        position: relative; 
+        top: auto; right: auto;
+        background: transparent; 
+        width: auto; 
+        height: auto; 
+    }
+
+    .header .navbar.active{
+        right: 0; 
+    }
+
+    .header .navbar a{
+        color: var(--main-color);
+        display: inline-block; 
+        margin: 1rem; 
+        padding: 1rem; 
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .header .search-form{
+        width: 50%; /* Adjusted width for desktop */
+        right: 5%; /* Adjusted positioning for desktop */
+    }
+
+    .home{
+        background-position: center; /* Center background for desktop */
+        justify-content: flex-start; /* Adjust content alignment for desktop */
+        text-align: left; /* Align text to the left for desktop */
+    }
+
+    .home .content h3{
+        font-size: 3rem; /* Adjusted font size for desktop */
+    }
+
+    .home .content p{
+        font-size: 1.8rem; /* Adjusted font size for desktop */
+    }
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
